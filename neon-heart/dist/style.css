@@ -1,0 +1,63 @@
+body {
+  background-color: #000;    
+  margin: 0;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+#button-container {
+  position: absolute;
+  z-index: 10;
+}
+
+#surprise-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #ff1493;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#surprise-btn:hover {
+  background-color: #ff69b4;
+  transform: scale(1.05);
+}
+
+#canvas {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.name-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493, 0 0 30px #ff1493;
+  z-index: 5;
+  display: none;
+  font-family: 'Arial', sans-serif;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff1493, 0 0 15px #ff1493;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
+  }
+}
